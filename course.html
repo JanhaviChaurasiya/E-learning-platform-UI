@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Details | Learnify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Learnify</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Explore</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="course-details">
+  <div class="course-content">
+    <div class="video-container">
+      <iframe id="course-video" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="course-info">
+      <h2 id="course-title"></h2>
+      <p id="course-description"></p>
+      <button class="enroll-btn" onclick="location.href='enroll.html?course=Full%20Stack%20Web%20Development'">Enroll Now</button>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<script>
+const courses = {
+  1: { 
+    title: "Full Stack Web Development", 
+    video: "https://www.youtube.com/embed/nu_pCVPKzTk", 
+    description: "Master the art of building modern web applications. Learn HTML, CSS, JavaScript, and popular backend technologies like Node.js and Express. Gain hands-on experience with databases, RESTful APIs, and full-stack deployment.",
+    duration: "8 Weeks",
+    modules: 14,
+    level: "Beginner to Advanced"
+  },
+  2: { 
+    title: "Data Science with Python", 
+    video: "https://www.youtube.com/embed/r-uOLxNrNk8", 
+    description: "Dive into data analysis and visualization using Python. Learn Pandas, NumPy, Matplotlib, Seaborn, and Scikit-learn to clean, analyze, and visualize data, and build machine learning models to solve real-world problems.",
+    duration: "6 Weeks",
+    modules: 12,
+    level: "Beginner to Intermediate"
+  },
+  3: { 
+    title: "Cybersecurity Essentials", 
+    video: "https://www.youtube.com/embed/inWWhr5tnEA", 
+    description: "Learn the fundamentals of cybersecurity and ethical hacking. Understand network security, system vulnerabilities, encryption, and best practices to protect digital assets from cyber threats.",
+    duration: "5 Weeks",
+    modules: 10,
+    level: "Beginner"
+  },
+  4: { 
+    title: "UI/UX Design Fundamentals", 
+    video: "https://www.youtube.com/embed/c9Wg6Cb_YlU", 
+    description: "Explore the principles of user interface and user experience design. Learn wireframing, prototyping, and designing intuitive interfaces using tools like Figma and Adobe XD.",
+    duration: "4 Weeks",
+    modules: 8,
+    level: "Beginner"
+  },
+  5: { 
+    title: "Java Development", 
+    video: "https://www.youtube.com/embed/grEKMHGYyns", 
+    description: "Get hands-on with Java programming and object-oriented concepts. Build real-world applications, learn data structures, and explore GUI development to become a confident Java developer.",
+    duration: "7 Weeks",
+    modules: 12,
+    level: "Beginner to Intermediate"
+  },
+  6: { 
+    title: "Digital Marketing", 
+    video: "https://www.youtube.com/embed/hF515-0Tduk", 
+    description: "Learn the essentials of digital marketing including SEO, social media strategy, content creation, and analytics. Develop campaigns that drive engagement and conversions.",
+    duration: "3 Weeks",
+    modules: 6,
+    level: "Beginner"
+  },
+  7: { 
+    title: "AI & Machine Learning", 
+    video: "https://www.youtube.com/embed/D1eL1EnxXXQ", 
+    description: "Learn AI and Machine Learning from scratch. Understand key concepts like supervised and unsupervised learning, neural networks, deep learning, and build real-world ML projects using Python and popular libraries.",
+    duration: "8 Weeks",
+    modules: 10,
+    level: "Beginner to Intermediate"
+  }
+}; 
+
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+if(courses[id]){
+  document.getElementById("course-title").innerText = courses[id].title;
+
+  document.getElementById("course-video").src = courses[id].video;
+
+  document.getElementById("course-description").innerHTML = `
+    ${courses[id].description} <br><br>
+    <b>Duration:</b> ${courses[id].duration} <br>
+    <b>Modules:</b> ${courses[id].modules} <br>
+    <b>Level:</b> ${courses[id].level}
+  `;
+} else {
+  document.getElementById("course-title").innerText = "Course Not Found";
+  document.getElementById("course-video").style.display = "none";
+  document.getElementById("course-description").innerText = "";
+}
+</script>
+
+</body>
+</html>

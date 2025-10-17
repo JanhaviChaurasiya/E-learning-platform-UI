@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learnify | E-Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">e-learning</div>
+    <nav>
+      <ul class="nav-links">
+        <li class="dropdown">
+          <a href="#">Explore ▼</a>
+          <div class="dropdown-content">
+            <a href="course.html?id=1">Web Development</a>
+            <a href="course.html?id=4">UI/UX Design</a>
+            <a href="course.html?id=2">Data Science</a>
+            <a href="course.html?id=3">Cybersecurity</a>
+            <a href="course.html?id=6">Marketing</a>
+            <a href="course.html?id=5">Java Devlopment</a>
+            <a href="course.html?id=7">AI & ML</a>
+          </div>
+        </li>
+        <li><a href=courses.html>Courses</a></li>
+        <li><a href=dashboard.html>Dashboard</a></li>
+      </ul>
+
+    </nav>
+    <div class="auth-buttons">
+      <button class="login"><a href="login.html">Log in</a></button>
+      <button class="signup"><a href=register.html>Register</a></button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Master tomorrow’s skills today</h1>
+      <p>Boost your career with expert-led online courses in tech, design, and more.</p>
+      <div class="hero-buttons">
+        <button class="primary-btn">Get Started</button>
+        <button class="outline-btn">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="image.jpg" alt="Learning" />
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Top Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">Web Development</div>
+      <div class="category-card">UI/UX Design</div>
+      <div class="category-card">Data Science</div>
+      <div class="category-card">Cybersecurity</div>
+      <div class="category-card">Marketing</div>
+      <div class="category-card">AI & ML</div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses">
+    <h2>Popular Courses</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <a href="course.html?id=1">
+        <img src="How-to-Become-a-Full-Stack-Web-Developer.png" alt="Web Dev" />
+        <h3>Full Stack Web Development</h3>
+        </a>
+        <p>Learn HTML, CSS, JS, and more to build full websites.</p>
+        <button class="enroll-btn" onclick="location.href='course.html?id=1'">Enroll Now</button>
+
+      </div>
+      <div class="course-card">
+      <a href="course.html?id=4">
+        <img src="How-to-Become-a-UIUX-Designer.png" alt="UI UX" />
+        <h3>UI/UX Design Fundamentals</h3></a>
+        <p>Master design principles and tools like Figma.</p>
+        <button class="enroll-btn" onclick="location.href='course.html?id=4'">Enroll Now</button>
+
+      </div>
+      <div class="course-card">
+        <a href="course.html?id=2">
+        <img src="data-science-with-python.jpg" alt="Data" />
+        <h3>Data Science with Python</h3></a>
+        <p>Analyze data and build models using Python.</p>
+        <button class="enroll-btn" onclick="location.href='course.html?id=2'">Enroll Now</button>
+
+      </div>
+      <div class="course-card">
+        <a href="course.html?id=3">
+        <img src="cybersecurity.jpg" alt="Cybersecurity" />
+        <h3>Cybersecurity Essentials</h3></a>
+        <p>Understand threats, prevention, and ethical hacking.</p>
+        <button class="enroll-btn" onclick="location.href='course.html?id=3'">Enroll Now</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 e-learn. All rights reserved.</p>
+  </footer>
+</body>
+</html>
